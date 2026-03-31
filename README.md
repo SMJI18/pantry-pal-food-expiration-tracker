@@ -25,9 +25,9 @@ The backend checks stored expiration dates and triggers an email notification to
 
 This system allows:
 
-• Automated reminder emails
-• Real-time notification of expiring food
-• Reduced food waste through proactive alerts
+- Automated reminder emails
+- Real-time notification of expiring food
+- Reduced food waste through proactive alerts
 
 EmailJS is used to securely send email notifications directly from the application without managing a separate mail server.
 

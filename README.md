@@ -201,12 +201,16 @@ npm run dev
 
 ---
 
+## Demo
+
+PantryPal helps users manage pantry items, track expiration dates, receive automated reminders, and discover recipes using available ingredients.
+
 ## Future Improvements
 
-• Mobile application integration
-• Smart grocery recommendations
-• AI-based food waste prediction
-• Multi-user pantry sharing
+- Mobile application integration
+- Smart grocery recommendations
+- AI-based food waste prediction
+- Multi-user pantry sharing
 
 ---
 

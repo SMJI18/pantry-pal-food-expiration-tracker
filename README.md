@@ -33,6 +33,62 @@ EmailJS is used to securely send email notifications directly from the applicati
 
 ---
 
+## Recipe Suggestion System
+
+PantryPal includes a **recipe discovery feature** that suggests dishes based on ingredients available in the user's pantry.
+
+The application integrates with the **TheMealDB public API** to dynamically fetch recipes that match selected ingredients.
+
+### How it works
+
+1. Users select ingredients from their pantry.
+2. The frontend constructs a comma-separated ingredient string.
+3. The application queries the **TheMealDB API**.
+4. The dashboard displays matching recipes with thumbnails and titles.
+
+### API Endpoint Used
+
+```
+https://www.themealdb.com/api/json/v1/1/filter.php?i=<ingredient1,ingredient2,...>
+```
+
+### Implementation
+
+The feature is implemented in:
+
+```
+frontend/src/components/RecipeIdeas.jsx
+```
+
+The component builds the ingredient string and fetches recipes:
+
+```javascript
+const ingredientString = ingredients.join(',')
+
+fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredientString}`)
+  .then(res => res.json())
+  .then(data => {
+    if (data.meals) {
+      setRecipes(data.meals.slice(0,6))
+    }
+  })
+```
+
+### Dashboard Integration
+
+Recipe suggestions are rendered on the dashboard using:
+
+```
+<RecipeIdeas ingredients={selectedIngredients} />
+```
+
+Each recipe returned from the API includes fields such as:
+
+* `idMeal` – recipe identifier
+* `strMeal` – recipe title
+* `strMealThumb` – recipe image
+
+
 ## Tech Stack
 
 ### Frontend

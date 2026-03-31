@@ -8,12 +8,12 @@ The application allows users to store item details, monitor expiration timelines
 
 ## Features
 
-• Add, edit, and delete pantry items
-• Track expiration dates of groceries
-• Dashboard overview of stored items
-• Expiration reminders sent automatically via email
-• Visual statistics for pantry usage
-• Responsive UI with dark mode support
+- Add, edit, and delete pantry items
+- Track grocery expiration dates
+- Dashboard overview of pantry inventory
+- Automated email reminders for expiring items
+- Visual statistics for pantry usage
+- Responsive UI with dark mode
 
 ---
 
